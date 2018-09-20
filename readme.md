@@ -1,6 +1,6 @@
 # Container Liferay 7 + tomcat + postgresql
 
-This container has been prepared to help support for Liferay LESA projets.
+This container has been prepared to support Liferay projets.
 It can also be used for Development purpose.
 
 ## How to run it
