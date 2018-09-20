@@ -1,0 +1,23 @@
+version: '3'
+services:
+    db:
+        image: "postgres:10.5"
+        volumes:
+            - ./postgres-data:/var/lib/postgresql/data
+        environment:
+            POSTGRES_PASSWORD: lportal
+            POSTGRES_USER: lportal
+        ports:
+            - "45432:5432"
+
+    liferay:
+        build: ./liferay-7-tomcat
+        volumes:
+            - ./deploy:/opt/liferay/deploy
+        ports:
+            - "40022:22"
+            - "48080:8080"
+            - "49000:9000"
+            - "41311:11311"
+        depends_on:
+            - db
