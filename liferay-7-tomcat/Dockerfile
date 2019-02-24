@@ -14,7 +14,7 @@ RUN apt-get update && apt-get -y install supervisor && \
   mkdir -p /etc/supervisor/conf.d
 
 # util apps
-RUN apt-get update && apt-get -y install nano vim unzip
+RUN apt-get update && apt-get -y install nano vim unzip p7zip-full
 
 # Assets Copy
 COPY assets /assets
@@ -28,7 +28,7 @@ RUN tar -zxvf /assets/packages/jdk* -C /opt/ && \
     export PATH=$PATH:/opt/jdk/bin
 
 # Install Liferay from /assets/packages/
-RUN unzip /assets/packages/liferay* -d /opt/ && \
+RUN 7z x /assets/packages/liferay* -o/opt/ && \
     ln -s /opt/liferay* /opt/liferay && \
     ln -s /opt/liferay/tomcat* /opt/liferay/tomcat
 
