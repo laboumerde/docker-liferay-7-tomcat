@@ -10,7 +10,7 @@ You have to install docker-compose to run it.
 Build: 
 * add the jdk and liferay tomcat bundles in the asset folder
     * "liferay-7-tomcat/assets/packages/" : Oracle JDK archive (jdk-8u<...>-linux-x64.tar.gz)
-    * "liferay-7-tomcat/assets/packages/" : Liferay 7.x tomcat bundle .zip archive (liferay<...>.zip)
+    * "liferay-7-tomcat/assets/packages/" : Liferay 7.x tomcat bundle .7z archive (liferay<...>.7z)
 * Simply run "docker-compose up -d"
 
 Run: 
